@@ -24,10 +24,11 @@ st.dataframe(data.head(20))
 
 option = st.selectbox(
     ' Lista de fallecidos según el criterio ',
-    ('Criterio virológico', 'Criterio serológico', 'Criterio radiológico', 'Criterio nexo epidemiológico', 
+    ('Criterio virolÃƒÂ³gico', 'Criterio serológico', 'Criterio radiolÃƒÂ³gico', 'Criterio nexo epidemiológico', 
      'Criterio investigación epidemiológica', 'Criterio clínico', 'Criterio SINADEF'))
-if option == 'Criterio virológico':
-    op1 = df["CLASIFICACION_DEF"].value_counts()
+if option == 'Criterio virolÃƒÂ³gico':
+    op1 = df["CLASIFICACION_DEF"].value_counts().FEMENINO
+    op2 = df["CLASIFICACION_DEF"].value_counts().MASCULINO
     b = (
         Bar()
         .add_xaxis(["FEMENINO", "MASCULINO"])
