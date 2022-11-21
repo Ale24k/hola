@@ -5,7 +5,7 @@ import gdown
 
 st.title('Fallecidos por COVID19')
 
-Criterio virolÃ³gico = Criterio virológico
+#Criterio virolÃ³gico = Criterio virológico
 # id = 1dSRlbtutz10Lgb4wiYPcWaK3w5QMUH8O
 @st.experimental_memo
 def download_data():
