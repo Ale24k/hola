@@ -5,6 +5,7 @@ import gdown
 
 st.title('Fallecidos por COVID19')
 
+Criterio virolÃ³gico = Criterio virológico
 # id = 1dSRlbtutz10Lgb4wiYPcWaK3w5QMUH8O
 @st.experimental_memo
 def download_data():
@@ -25,3 +26,21 @@ option = st.selectbox(
     ' Lista de fallecidos según el criterio ',
     ('Criterio virológico', 'Criterio serológico', 'Criterio radiológico', 'Criterio nexo epidemiológico', 
      'Criterio investigación epidemiológica', 'Criterio clínico', 'Criterio SINADEF'))
+if option == 'Criterio virológico':
+    op1 = df["CLASIFICACION_DEF"].value_counts()
+    b = (
+        Bar()
+        .add_xaxis(["FEMENINO", "MASCULINO"])
+        .add_yaxis(
+            "Casos positivos por sexo", [int(tipo2),int(tipo3)]
+        )
+        .set_global_opts(
+            title_opts=opts.TitleOpts(
+                title=" "
+            ),
+            toolbox_opts=opts.ToolboxOpts(),
+        )
+    )
+    st_pyecharts(b)
+    
+    
