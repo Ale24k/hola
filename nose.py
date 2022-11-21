@@ -51,7 +51,7 @@ number = st.number_input('Ingrese un numero')
 st.write('El numero es ', number)
 
 
-option = st.selectbox(' Lista de fallecidos según el criterio ' , clasificacion_def)
+option = st.selectbox(' Lista de fallecidos según el criterio ' , CLASIFICACION_DEF)
 
 if option == 'Criterio virolÃƒÂ³gico':
     op1 = df["CLASIFICACION_DEF"].value_counts()
