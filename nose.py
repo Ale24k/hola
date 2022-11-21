@@ -3,8 +3,11 @@ import pandas as pd
 import numpy as np
 import gdown
 
-st.title('Fallecidos por COVID-19')
 
+option = st.selectbox(
+    ' Lista de fallecidos según el criterio ',
+    ('Criterio virológico', 'Criterio serológico', 'Criterio radiológico', 'Criterio nexo epidemiológico', 
+     'Criterio investigación epidemiológica', 'Criterio clínico', 'Criterio SINADEF'))
 
 # id = 1dSRlbtutz10Lgb4wiYPcWaK3w5QMUH8O
 @st.experimental_memo
