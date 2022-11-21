@@ -5,12 +5,7 @@ import gdown
 
 st.title('Fallecidos por COVID-19')
 
-with st.sidebar:
-    selected = option_menu(
-        menu_title= 'Menú principal',
-        options = ['Inicio', 'Miembros', 'Dataset','Suwis'],
-        default_index=0,
-    )
+
 # id = 1dSRlbtutz10Lgb4wiYPcWaK3w5QMUH8O
 @st.experimental_memo
 def download_data():
