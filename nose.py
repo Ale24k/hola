@@ -17,9 +17,3 @@ def download_data():
     output = 'data.csv'
     gdown.download(url,output,quiet = False)
 
-download_data()
-#vamos a sacar el primer millon de datos:
-data = pd.read_csv('data.csv', sep = ';', nrows=1000000, parse_dates= ['FECHA_CORTE', 'FECHA_FALLECIMIENTO'])
-st.dataframe(data.head(20))
-edades= data['EDAD_DECLARADA']
-st.line_chart(edades)
