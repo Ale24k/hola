@@ -47,11 +47,7 @@ st.write(sexo)
 st.write(departamento)
 opcion_departamento = st.selectbox('Selecciona un departamento:', departamento)
 
-number = st.number_input('Ingrese un numero')
-st.write('El numero es ', number)
-
-
-option = st.selectbox(' Lista de fallecidos según el criterio ' , CLASIFICACION_DEF)
+option = st.selectbox('Lista de fallecidos según el criterio ' , CLASIFICACION_DEF)
 
 if option == 'Criterio virolÃƒÂ³gico':
     op1 = df["CLASIFICACION_DEF"].value_counts()
