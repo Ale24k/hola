@@ -29,5 +29,5 @@ st.dataframe(data.head(20))
 criterio = data['CLASIFICACION_DEF'].unique()
 option_criterio = st.selectbox('Lista de fallecidos según el criterio ' , criterio)
 #if option_criterio == 'Criterio SINADEF':
-    B = df[['CLASIFICACION_DEF']].groupby('CLASIFICACION_DEF').count()
-    st.bar_chart(B)
+    #B = df[['CLASIFICACION_DEF']].groupby('CLASIFICACION_DEF').count()
+    #st.bar_chart(B)
