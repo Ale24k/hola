@@ -28,13 +28,13 @@ st.dataframe(data.head(20))
 criterio = data['CLASIFICACION_DEF'].unique()
 option_criterio = st.selectbox('Lista de fallecidos según el criterio ' , criterio)
 
+#if option_criterio == '
 #GRAFICO DE BARRAS DE LOS CRITERIOS
 df_criterios = df[df['CLASIFICACION_DEF'] == option_criterio]
 df_crit = df_criterios.CLASIFICACION_DEF.value_counts()
 st.write('Distribución por criterios')
-st.bar_chart(df_criterios)
+st.bar_chart(df_crit)
 
 
 #if option_criterio == 'Criterio SINADEF':
     #B = df[['CLASIFICACION_DEF']].groupby('CLASIFICACION_DEF').count()
-    #st.bar_chart(B)
