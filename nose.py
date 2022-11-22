@@ -49,7 +49,7 @@ opcion_departamento = st.selectbox('Selecciona un departamento:', departamento)
 
 
 criterio = data['CLASIFICACION_DEF'].unique()
-option_criterio = st.selectbox('Lista de fallecidos según el criterio ' , CLASIFICACION_DEF)
+option_criterio = st.selectbox('Lista de fallecidos según el criterio ' , criterio)
 if opcion_criterio == 'Criterio virolÃƒÂ³gico':
     op1 = df["CLASIFICACION_DEF"].value_counts()
     op2 = df["CLASIFICACION_DEF"].value_counts()
